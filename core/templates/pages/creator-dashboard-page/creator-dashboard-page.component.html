@@ -9,7 +9,7 @@
   <div class="m-auto oppia-dashboard-aggregated-stats oppia-creator-dashboard-main-content pt-1"
        *ngIf="explorationsList?.length > 0 || collectionsList?.length > 0"
        [ngClass]="{'oppia-creator-dashboard-mobile-mode': checkMobileView()}">
-    <mat-card layout="row" class="oppia-mat-card">
+    <mat-card layout="row" class="oppia-mat-card testclass">
       <div class="average-ratings stats-card"
            [attr.aria-label]="'Average ratings ' + (dashboardStats.averageRatings || 'N/A')"
            tabindex="0" >
@@ -453,7 +453,7 @@
     padding-right: 10px;
   }
   .oppia-creator-dashboard-main-content .stats-card .stat-value-with-rating {
-    /* margin-top: 0; */
+    margin-top: 0;
     position: absolute;
     top: 0.75em;
   }
@@ -917,5 +917,17 @@
     .mat-card {
      width: fit-content;
     }
+  }
+
+  .testclass {
+    width:fit-content;
+  }
+
+  .testclass:first-child{
+    margin-top: 10px;
+  }
+
+  .testclass:last-child{
+    margin-bottom: 10px;
   }
 </style>
