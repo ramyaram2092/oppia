@@ -921,11 +921,18 @@
 
   
 
-  .stats-card:first-child(not stats-card-header){ 
+  /* .stats-card:first-child(not stats-card-header){ 
     margin-top: 10px;
-  }
+  } */
+  .mat-card>:first-child, .mat-card-content>:first-child {
+    margin-top: 10px;
+}
 
-  .stats-card:last-child(not stats-card-footer){
+  /* .stats-card:last-child(not stats-card-footer){
     margin-bottom: 10px;
-  }
+  } */
+
+  .mat-card>:last-child:not(.mat-card-footer), .mat-card-content>:last-child:not(.mat-card-footer) {
+    margin-bottom: 0;
+}
 </style>
